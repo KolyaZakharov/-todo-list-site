@@ -42,8 +42,8 @@
 
       {% endif %}
       <div class="container">
-        <a href="#">Update</a>
-        <a href="#">Delete</a>
+        <a href="{% url 'tasks:task-update' pk=task.id %}">Update</a>
+        <a href="{% url 'tasks:task-delete' pk=task.id %}" class="link-danger">Delete</a>
       </div>
 
     </div>
