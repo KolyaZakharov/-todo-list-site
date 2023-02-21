@@ -1,6 +1,6 @@
 from django.views import generic
 
-from tasks.models import Task
+from tasks.models import Task, Tag
 
 
 class IndexView(generic.ListView):
@@ -9,3 +9,5 @@ class IndexView(generic.ListView):
     template_name = "tasks/index.html"
 
 
+class TagsListView(generic.ListView):
+    model = Tag
