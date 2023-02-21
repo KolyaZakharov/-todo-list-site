@@ -11,3 +11,7 @@ class IndexView(generic.ListView):
 
 class TagsListView(generic.ListView):
     model = Tag
+
+
+class TaskCreateView(generic.CreateView):
+    model = Task
