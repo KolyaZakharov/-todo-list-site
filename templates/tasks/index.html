@@ -3,10 +3,10 @@
 {% block content %}
   <h1>
     TODO List
-    <a href="#" class="btn btn-primary link-to-page"> Add new task</a>
+    <a href="{% url 'tasks:task-create' %}" class="btn btn-primary link-to-page"> Add new task</a>
   </h1>
   {% for task in task_list %}
-    <div class="contaner-fluid">
+    <div class="contaner-fluid container-zkh">
       {% if task.is_complete %}
       <div class="container form-group">
         <h3>
