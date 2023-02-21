@@ -1,2 +1,8 @@
 Django==4.1.7
 crispy-bootstrap5==0.7.0
+flake8-quotes==3.3.2
+flake8-variables-names==0.0.5
+pep8-naming==0.13.3
+django-crispy-forms==2.0
+black==23.1.0
+python-dotenv==0.21.1
