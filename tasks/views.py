@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.views import generic
 
-# Create your views here.
+from tasks.models import Task
+
+
+class IndexView(generic.ListView):
+    model = Task
+    queryset = Task.objects.all().prefetch_related("tag")
+    template_name = "tasks/index.html"
+
+

@@ -22,5 +22,5 @@ class Task(models.Model):
         ordering = ["is_complete", "-datetime"]
 
     def __str__(self):
-        return f"{self.content[:10]}"
+        return f"{self.content[:25]} ..."
 

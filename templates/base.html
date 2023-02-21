@@ -8,15 +8,22 @@
   <title>Tasks</title>
 </head>
 <body>
-  {% block sidebar %}
-  {% endblock %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        {% block sidebar %}
+          {% include "includes/sidebar.html" %}
+        {% endblock %}
+      </div>
+      <div class="col-10">
+        {% block content %}
 
-  {% block content %}
+        {% endblock %}
+        {% block pagination%}
 
-  {% endblock %}
-
-  {% block pagination%}
-
-  {% endblock %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
 </body>
 </html>
