@@ -14,7 +14,7 @@
           <span class="text-success text-uppercase ">Done</span>
         </h3>
 
-        <a href="#" class="btn btn-secondary link-to-page"> Undo </a>
+        <a href="{% url 'tasks:task-update-tag' pk=task.id %}" class="btn btn-secondary link-to-page"> Undo </a>
         {{ task.datetime }}
       </div>
 
@@ -24,7 +24,7 @@
           {{ task }}
           <span class="text-danger text-uppercase">Not done</span>
         </h3>
-        <a href="#" class="btn btn-success link-to-page"> Complete</a>
+        <a href="{% url 'tasks:task-update-tag' pk=task.id %}" class="btn btn-success link-to-page"> Complete</a>
         {{ task.datetime }}
       </div>
 
