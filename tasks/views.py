@@ -33,6 +33,7 @@ class TagDeleteView(generic.DeleteView):
     success_url = reverse_lazy("tasks:tags")
     template_name = "tasks/tag_delete.html"
 
+
 class TaskCreateView(generic.CreateView):
     model = Task
     fields = "__all__"
@@ -52,7 +53,6 @@ class TaskDeleteView(generic.DeleteView):
 
 
 class TagTaskListView(generic.ListView):
-
     model = Task
     fields = "__all__"
     success_url = reverse_lazy("tasks:index")
@@ -61,8 +61,4 @@ class TagTaskListView(generic.ListView):
         task = get_object_or_404(Task, pk=self.kwargs["pk"])
         task.is_complete = not task.is_complete
         task.save()
-        return HttpResponseRedirect(
-            reverse("tasks:index")
-        )
-
-
+        return HttpResponseRedirect(reverse("tasks:index"))

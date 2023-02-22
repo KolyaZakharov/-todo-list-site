@@ -42,6 +42,9 @@ class TaskTagsTests(TestCase):
         response = self.client.get(TASK_URL)
 
         self.assertEqual(
-            list(response.context["task_list"].filter(content="test").first().tag.all()),
+            list(
+                response.context["task_list"]
+                .filter(content="test").first().tag.all()
+            ),
             list(self.task.tag.all()),
         )
