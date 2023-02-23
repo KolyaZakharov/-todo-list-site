@@ -10,7 +10,4 @@ to run the project locally do the following steps:
   (SECRET_KEY - It's a django secret key used for hashing
 etc.)
 - python manage.py migrate
-## for login :
-**Login:** `admin`
 
-**Password**   `admin`
