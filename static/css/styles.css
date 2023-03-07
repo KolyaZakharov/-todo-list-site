@@ -1,0 +1,13 @@
+body {
+    margin-top: 20px;
+}
+
+.link-to-page {
+    float: right;
+    margin: 0 2px 0 2px;
+}
+.container-zkh{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+}
