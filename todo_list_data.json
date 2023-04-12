@@ -1,0 +1,72 @@
+[
+{
+  "model": "tasks.tag",
+  "pk": 3,
+  "fields": {
+    "name": "Home"
+  }
+},
+{
+  "model": "tasks.tag",
+  "pk": 4,
+  "fields": {
+    "name": "GYM"
+  }
+},
+{
+  "model": "tasks.tag",
+  "pk": 5,
+  "fields": {
+    "name": "English learning"
+  }
+},
+{
+  "model": "tasks.tag",
+  "pk": 6,
+  "fields": {
+    "name": "Programming learning"
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 2,
+  "fields": {
+    "content": "Buy groceries for the week",
+    "datetime": "2023-02-19T20:41:07.846Z",
+    "deadline": null,
+    "is_complete": true,
+    "tag": [
+      3
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 3,
+  "fields": {
+    "content": "Learn 100 new words in English",
+    "datetime": "2023-02-19T20:42:47.238Z",
+    "deadline": "2023-03-13T15:15:00Z",
+    "is_complete": true,
+    "tag": [
+      5
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$MxiYq9GekFi9KzyrlZGq4c$PuaahR9JEFb2qBbmVNWDX9alLTmIv/s994ZU0b+9oCs=",
+    "last_login": "2023-02-24 16:15:13.906854",
+    "is_superuser": 1,
+    "username": "admin",
+    "last_name": "",
+    "email": "adminuser@admin.com",
+    "is_staff": 1,
+    "is_active": 1,
+    "date_joined": "2023-02-19 19:43:14.836285",
+    "first_name": ""
+  }
+}
+]

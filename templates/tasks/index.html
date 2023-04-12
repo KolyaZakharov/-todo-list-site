@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    TODO List
+    <a href="{% url 'tasks:task-create' %}" class="btn btn-primary link-to-page"> Add new task</a>
+  </h1>
+  {% for task in task_list %}
+    <div class="contaner-fluid container-zkh">
+      {% if task.is_complete %}
+      <div class="container form-group">
+        <h3>
+          {{ task }}
+          <span class="text-success text-uppercase ">Done</span>
+        </h3>
+
+        <a href="{% url 'tasks:task-update-tag' pk=task.id %}" class="btn btn-secondary link-to-page"> Undo </a>
+        {{ task.datetime }}
+      </div>
+
+    {% else %}
+      <div class="container">
+        <h3>
+          {{ task }}
+          <span class="text-danger text-uppercase">Not done</span>
+        </h3>
+        <a href="{% url 'tasks:task-update-tag' pk=task.id %}" class="btn btn-success link-to-page"> Complete</a>
+        {{ task.datetime }}
+      </div>
+
+      {% if task.deadline %}
+        <div class="container text-warning">deadline:  {{ task.deadline }}</div>
+      {% endif %}
+
+    {% endif %}
+      {% if task.tag %}
+        <div class="container">
+          {% for tag in task.tag.all %}
+          <span class="text-muted">#{{tag }}</span>
+          {% endfor %}
+        </div>
+
+      {% endif %}
+      <div class="container">
+        <a href="{% url 'tasks:task-update' pk=task.id %}">Update</a>
+        <a href="{% url 'tasks:task-delete' pk=task.id %}" class="link-danger">Delete</a>
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+  {% endfor %}
+{% endblock %}
